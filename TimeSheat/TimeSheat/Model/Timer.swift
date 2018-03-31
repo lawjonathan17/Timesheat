@@ -94,7 +94,7 @@ class Clock
         timer = nil
         
         startTime = nil
-        duration = 360
+        duration = 1500
         elapsedTime = 0
         
         timerAction()

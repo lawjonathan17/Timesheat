@@ -18,6 +18,18 @@ class ViewController: NSViewController
         }
     }
     
+    @IBAction func stopButtonClicked(_ sender: Any)
+    {
+        clock.stopTimer()
+    }
+    
+    
+    @IBAction func resetButtonClicked(_ sender: Any)
+    {
+        clock.resetTimer()
+        updateDisplay(for: 1500)
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
