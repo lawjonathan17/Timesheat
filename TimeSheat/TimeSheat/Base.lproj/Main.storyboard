@@ -361,6 +361,13 @@ Gw
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-XN-eCy">
+                                <rect key="frame" x="20" y="79" width="488" height="270"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <connections>
+                                    <segue destination="S9i-7W-maB" kind="embed" id="MV9-Rr-A4v"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tLs-Zv-yzO" secondAttribute="trailing" id="SMM-bK-gq0"/>
@@ -378,6 +385,131 @@ Gw
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460" y="1035"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="12R-gO-ndu">
+            <objects>
+                <viewController id="VGt-ON-2GJ" sceneMemberID="viewController">
+                    <view key="view" id="hzb-4e-Xq6">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="CV7-Fd-9Ee" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QLz-78-eAK">
+            <objects>
+                <viewController id="Z4i-Bh-Qny" sceneMemberID="viewController">
+                    <view key="view" id="vX5-lG-gMA">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="2ng-SY-f82" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="oyC-o4-1DP">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="S9i-7W-maB" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="pIy-70-7gr"/>
+                        <tabViewItem identifier="" id="cK1-h4-GrY"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="uYI-B4-mj6">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="S9i-7W-maB" id="6ev-l9-BZn"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="uYI-B4-mj6" id="mab-pV-5bz"/>
+                        <segue destination="igI-oL-Pzy" kind="relationship" relationship="tabItems" id="xyd-fX-mBd"/>
+                        <segue destination="Qk3-Fw-vPo" kind="relationship" relationship="tabItems" id="2iw-8V-L4c"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="9Id-Dz-Jhl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="761"/>
+        </scene>
+        <!--Countdown-->
+        <scene sceneID="INa-a4-7tB">
+            <objects>
+                <viewController title="Countdown" id="igI-oL-Pzy" customClass="CountdownController" customModule="TimeSheat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="jlr-cQ-w8e">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="br2-Yt-HQh">
+                                <rect key="frame" x="187" y="241" width="113" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="25:00" id="YFZ-AF-ZDQ">
+                                    <font key="font" metaFont="system" size="37"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTk-aQ-EGm">
+                                <rect key="frame" x="0.0" y="37" width="136" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Start" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fAT-nw-jB9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gKp-rN-zxT">
+                                <rect key="frame" x="156" y="31" width="138" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zde-99-TLk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-1C-aGd">
+                                <rect key="frame" x="302" y="41" width="131" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFC-MX-s6i">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="Sqq-bc-WQG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="575"/>
+        </scene>
+        <!--Stopwatch-->
+        <scene sceneID="Nyp-xc-Ntq">
+            <objects>
+                <viewController title="Stopwatch" id="Qk3-Fw-vPo" sceneMemberID="viewController">
+                    <view key="view" id="42A-51-LQb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="NgA-ur-knL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="947"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5tk-7K-xaQ">
+            <objects>
+                <viewController id="WuS-cC-Gpx" sceneMemberID="viewController">
+                    <view key="view" id="sR3-rA-lFb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="3ub-9D-xlf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136" y="1607"/>
         </scene>
     </scenes>
 </document>
