@@ -34,6 +34,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F85DEF8C206F65A20009C17E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F85DEF8D206F65B90009C17E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F85FEF4E206C65BB0000A082 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		F85FEF40206C65BA0000A082 = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +68,9 @@
 		F85FEF4B206C65BB0000A082 /* TimeSheat */ = {
 			isa = PBXGroup;
 			children = (
+				F85DEF8D206F65B90009C17E /* View Controllers */,
+				F85DEF8C206F65A20009C17E /* Model */,
 				F85FEF4C206C65BB0000A082 /* AppDelegate.swift */,
-				F85FEF4E206C65BB0000A082 /* ViewController.swift */,
 				F85FEF50206C65BB0000A082 /* Assets.xcassets */,
 				F85FEF52206C65BB0000A082 /* Main.storyboard */,
 				F85FEF55206C65BB0000A082 /* Info.plist */,

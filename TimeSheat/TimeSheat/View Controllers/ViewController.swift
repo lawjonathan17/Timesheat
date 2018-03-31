@@ -14,6 +14,10 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var helloLabel: NSTextField!
     
+    @IBOutlet weak var timeLabel: NSStackView!
+    
+    @IBAction func startButtonClicked(_ sender: Any) {
+    }
     
     @IBAction func beginTimer(_ sender: Any) {
         var name = timeField.stringValue
