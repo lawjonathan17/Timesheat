@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  TimeSheat
-//
-//  Created by Jonathan Law on 3/28/18.
-//  Copyright © 2018 Jonathan Law. All rights reserved.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
