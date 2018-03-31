@@ -1,11 +1,3 @@
-//
-//  Timer.swift
-//  TimeSheat
-//
-//  Created by Jonathan Law on 3/30/18.
-//  Copyright © 2018 Jonathan Law. All rights reserved.
-//
-
 import Foundation
 
 protocol ClockProtocol
