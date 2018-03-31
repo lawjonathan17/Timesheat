@@ -10,7 +10,7 @@ class Clock
 {
     var timer: Timer? = nil
     var startTime: Date?
-    var duration: TimeInterval = 360      // default = 6 minutes
+    var duration: TimeInterval = 1500      // default = 25 minutes
     var elapsedTime: TimeInterval = 0
     var delegate: ClockProtocol?
     

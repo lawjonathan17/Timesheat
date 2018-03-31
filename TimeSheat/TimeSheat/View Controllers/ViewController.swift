@@ -13,7 +13,7 @@ class ViewController: NSViewController
         }
         else
         {
-            clock.duration = 360
+            clock.duration = 1500
             clock.startTimer()
         }
     }
