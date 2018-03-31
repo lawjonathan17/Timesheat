@@ -3,6 +3,10 @@ import Cocoa
 class ViewController: NSViewController
 {
     @IBOutlet weak var timeField: NSTextField!
+    @IBOutlet weak var startButton: NSButton!
+    @IBOutlet weak var stopButton: NSButton!
+    @IBOutlet weak var resetButton: NSButton!
+    
     var clock = Clock()
     var prefs = Preferences()
     
