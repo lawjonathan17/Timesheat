@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F85DEF8F206F66350009C17E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DEF8E206F66350009C17E /* Timer.swift */; };
 		F85FEF4D206C65BB0000A082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85FEF4C206C65BB0000A082 /* AppDelegate.swift */; };
 		F85FEF4F206C65BB0000A082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85FEF4E206C65BB0000A082 /* ViewController.swift */; };
 		F85FEF51206C65BB0000A082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85FEF50206C65BB0000A082 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F85DEF8E206F66350009C17E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		F85FEF49206C65BB0000A082 /* TimeSheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeSheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85FEF4C206C65BB0000A082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F85FEF4E206C65BB0000A082 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 		F85DEF8C206F65A20009C17E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F85DEF8E206F66350009C17E /* Timer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85DEF8F206F66350009C17E /* Timer.swift in Sources */,
 				F85FEF4F206C65BB0000A082 /* ViewController.swift in Sources */,
 				F85FEF4D206C65BB0000A082 /* AppDelegate.swift in Sources */,
 			);
