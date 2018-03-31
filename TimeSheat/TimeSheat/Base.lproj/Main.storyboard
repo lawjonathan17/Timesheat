@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -66,17 +65,17 @@
                                     <items>
                                         <menuItem title="Start" keyEquivalent="s" id="mZ1-O9-kfl">
                                             <connections>
-                                                <action selector="startTimerMenuItemSelected:" target="Ady-hI-5gd" id="krG-2k-YRW"/>
+                                                <action selector="startTimerMenuItemSelected:" target="Ady-hI-5gd" id="DuZ-yX-wje"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Stop" keyEquivalent="x" id="w1e-Yu-CdR">
                                             <connections>
-                                                <action selector="stopTimerMenuItemSelected:" target="Ady-hI-5gd" id="gW3-GL-LW0"/>
+                                                <action selector="stopTimerMenuItemSelected:" target="Ady-hI-5gd" id="fkh-fs-iFF"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Reset" keyEquivalent="r" id="Akc-Lv-hzd">
                                             <connections>
-                                                <action selector="resetTimerMenuItemSelected:" target="Ady-hI-5gd" id="AbY-hK-ZTp"/>
+                                                <action selector="resetTimerMenuItemSelected:" target="Ady-hI-5gd" id="LB8-dB-Hwi"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -291,7 +290,7 @@ Gw
                 </viewController>
                 <customObject id="5db-w4-Gl9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="1557"/>
+            <point key="canvasLocation" x="659" y="1549"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -301,114 +300,19 @@ Gw
                         <rect key="frame" x="0.0" y="0.0" width="528" height="466"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fillEqually" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-Zv-yzO">
-                                <rect key="frame" x="0.0" y="0.0" width="528" height="60"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2FT-fA-yKg">
-                                        <rect key="frame" x="0.0" y="-1" width="176" height="62"/>
-                                        <buttonCell key="cell" type="smallSquare" title="Start" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Obv-jf-5cZ">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system" size="24"/>
-                                            <connections>
-                                                <action selector="startButtonClicked:" target="XfG-lQ-9wD" id="Y2o-YX-10w"/>
-                                            </connections>
-                                        </buttonCell>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-yk-n5M">
-                                        <rect key="frame" x="176" y="-1" width="176" height="62"/>
-                                        <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fXO-NI-6eS">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system" size="24"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="stopButtonClicked:" target="XfG-lQ-9wD" id="0ue-xR-b7w"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6P4-JQ-Vab">
-                                        <rect key="frame" x="352" y="-1" width="176" height="62"/>
-                                        <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0aw-r1-Q6l">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system" size="24"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="resetButtonClicked:" target="XfG-lQ-9wD" id="baM-oh-qhJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="07Y-rR-M42"/>
-                                    <constraint firstItem="XVg-yk-n5M" firstAttribute="height" secondItem="tLs-Zv-yzO" secondAttribute="height" id="4GM-RZ-0PL"/>
-                                    <constraint firstItem="6P4-JQ-Vab" firstAttribute="height" secondItem="tLs-Zv-yzO" secondAttribute="height" id="Vgf-7O-RpK"/>
-                                    <constraint firstItem="2FT-fA-yKg" firstAttribute="height" secondItem="tLs-Zv-yzO" secondAttribute="height" id="dup-5k-ADn"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N38-er-CRk">
-                                <rect key="frame" x="181" y="319" width="167" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="25:00" id="i4S-f1-nLW">
-                                    <font key="font" metaFont="system" size="42"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-XN-eCy">
-                                <rect key="frame" x="20" y="79" width="488" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="528" height="466"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <connections>
                                     <segue destination="S9i-7W-maB" kind="embed" id="MV9-Rr-A4v"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tLs-Zv-yzO" secondAttribute="trailing" id="SMM-bK-gq0"/>
-                            <constraint firstAttribute="bottom" secondItem="tLs-Zv-yzO" secondAttribute="bottom" id="fGW-bA-Q5G"/>
-                            <constraint firstItem="tLs-Zv-yzO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fg2-h0-A2p"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="resetButton" destination="6P4-JQ-Vab" id="gnd-5p-rqX"/>
-                        <outlet property="startButton" destination="2FT-fA-yKg" id="MUt-iN-XTJ"/>
-                        <outlet property="stopButton" destination="XVg-yk-n5M" id="XeP-np-Ou6"/>
-                        <outlet property="timeField" destination="N38-er-CRk" id="oT5-wa-6Op"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460" y="1035"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="12R-gO-ndu">
-            <objects>
-                <viewController id="VGt-ON-2GJ" sceneMemberID="viewController">
-                    <view key="view" id="hzb-4e-Xq6">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="CV7-Fd-9Ee" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="QLz-78-eAK">
-            <objects>
-                <viewController id="Z4i-Bh-Qny" sceneMemberID="viewController">
-                    <view key="view" id="vX5-lG-gMA">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="2ng-SY-f82" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="oyC-o4-1DP">
@@ -435,7 +339,7 @@ Gw
                 </tabViewController>
                 <customObject id="9Id-Dz-Jhl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="761"/>
+            <point key="canvasLocation" x="1082" y="1035"/>
         </scene>
         <!--Countdown-->
         <scene sceneID="INa-a4-7tB">
@@ -461,29 +365,44 @@ Gw
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="startButtonClicked:" target="igI-oL-Pzy" id="rcl-CK-yh0"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gKp-rN-zxT">
-                                <rect key="frame" x="156" y="31" width="138" height="62"/>
+                                <rect key="frame" x="156" y="37" width="138" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zde-99-TLk">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="stopButtonClicked:" target="igI-oL-Pzy" id="MCo-RB-6Ze"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-1C-aGd">
-                                <rect key="frame" x="302" y="41" width="131" height="41"/>
+                                <rect key="frame" x="302" y="37" width="131" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFC-MX-s6i">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="resetButtonClicked:" target="igI-oL-Pzy" id="NYQ-FT-6c9"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="G6C-1C-aGd" id="0aG-kd-hai"/>
+                        <outlet property="startButton" destination="LTk-aQ-EGm" id="iZe-at-aEu"/>
+                        <outlet property="stopButton" destination="gKp-rN-zxT" id="4hV-aO-C65"/>
+                        <outlet property="timeField" destination="br2-Yt-HQh" id="jwd-qK-kXl"/>
+                    </connections>
                 </viewController>
                 <customObject id="Sqq-bc-WQG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753" y="575"/>
+            <point key="canvasLocation" x="1761" y="846"/>
         </scene>
         <!--Stopwatch-->
         <scene sceneID="Nyp-xc-Ntq">
@@ -496,20 +415,7 @@ Gw
                 </viewController>
                 <customObject id="NgA-ur-knL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753" y="947"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5tk-7K-xaQ">
-            <objects>
-                <viewController id="WuS-cC-Gpx" sceneMemberID="viewController">
-                    <view key="view" id="sR3-rA-lFb">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="3ub-9D-xlf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1136" y="1607"/>
+            <point key="canvasLocation" x="1761" y="1217"/>
         </scene>
     </scenes>
 </document>
