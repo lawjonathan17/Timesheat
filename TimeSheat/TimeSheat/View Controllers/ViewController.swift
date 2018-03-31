@@ -1,12 +1,8 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    
-    @IBOutlet weak var helloLabel: NSTextField!
     @IBOutlet weak var timeField: NSTextField!
-    
     var clock = Clock()
-    
     
     @IBAction func startButtonClicked(_ sender: Any) {
         if clock.isPaused {
@@ -15,15 +11,6 @@ class ViewController: NSViewController {
             clock.duration = 360
             clock.startTimer()
         }
-    }
-    
-    @IBAction func beginTimer(_ sender: Any) {
-        var name = timeField.stringValue
-        if name.isEmpty {
-            name = "World"
-        }
-        let greeting = "Hello \(name)!"
-        helloLabel.stringValue = greeting
     }
     
     override func viewDidLoad() {
