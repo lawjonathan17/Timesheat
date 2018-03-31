@@ -24,7 +24,7 @@ class ViewController: NSViewController
         clock.delegate = self
     }
 
-    override var representedObject: Any?\
+    override var representedObject: Any?
     {
         didSet
         {
