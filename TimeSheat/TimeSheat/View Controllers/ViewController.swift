@@ -1,33 +1,40 @@
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController
+{
     @IBOutlet weak var timeField: NSTextField!
     var clock = Clock()
     
-    @IBAction func startButtonClicked(_ sender: Any) {
-        if clock.isPaused {
+    @IBAction func startButtonClicked(_ sender: Any)
+    {
+        if clock.isPaused
+        {
             clock.resumeTimer()
-        } else {
+        }
+        else
+        {
             clock.duration = 360
             clock.startTimer()
         }
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
         clock.delegate = self
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    override var representedObject: Any?\
+    {
+        didSet
+        {
+            // Update the view, if already loaded.
         }
     }
 }
 
-extension ViewController: ClockProtocol {
-    
+extension ViewController: ClockProtocol
+{
     func timeRemainingOnTimer(_ timer: Clock, timeRemaining: TimeInterval) {
         updateDisplay(for: timeRemaining)
     }
@@ -37,16 +44,19 @@ extension ViewController: ClockProtocol {
     }
 }
 
-extension ViewController {
-    
+extension ViewController
+{
     // MARK: - Display
     
-    func updateDisplay(for timeRemaining: TimeInterval) {
+    func updateDisplay(for timeRemaining: TimeInterval)
+    {
         timeField.stringValue = textToDisplay(for: timeRemaining)
     }
     
-    private func textToDisplay(for timeRemaining: TimeInterval) -> String {
-        if timeRemaining == 0 {
+    private func textToDisplay(for timeRemaining: TimeInterval) -> String
+    {
+        if timeRemaining == 0
+        {
             return "Done!"
         }
         
@@ -58,5 +68,4 @@ extension ViewController {
         
         return timeRemainingDisplay
     }
-    
 }

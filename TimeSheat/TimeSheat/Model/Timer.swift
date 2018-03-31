@@ -22,16 +22,20 @@ class Clock
     var elapsedTime: TimeInterval = 0
     var delegate: ClockProtocol?
     
-    var isStopped: Bool {
+    var isStopped: Bool
+    {
         return timer == nil && elapsedTime == 0
     }
-    var isPaused: Bool {
+    var isPaused: Bool
+    {
         return timer == nil && elapsedTime > 0
     }
     
-    @objc dynamic func timerAction() {
+    @objc dynamic func timerAction()
+    {
         // 1
-        guard let startTime = startTime else {
+        guard let startTime = startTime else
+        {
             return
         }
         
@@ -42,16 +46,20 @@ class Clock
         let secondsRemaining = (duration - elapsedTime).rounded()
         
         // 4
-        if secondsRemaining <= 0 {
+        if secondsRemaining <= 0
+        {
             resetTimer()
             delegate?.timerHasFinished(self)
-        } else {
+        }
+        else
+        {
             delegate?.timeRemainingOnTimer(self, timeRemaining: secondsRemaining)
         }
     }
     
     // 1
-    func startTimer() {
+    func startTimer()
+    {
         startTime = Date()
         elapsedTime = 0
         
@@ -64,7 +72,8 @@ class Clock
     }
     
     // 2
-    func resumeTimer() {
+    func resumeTimer()
+    {
         startTime = Date(timeIntervalSinceNow: -elapsedTime)
         
         timer = Timer.scheduledTimer(timeInterval: 1,
@@ -76,7 +85,8 @@ class Clock
     }
     
     // 3
-    func stopTimer() {
+    func stopTimer()
+    {
         // really just pauses the timer
         timer?.invalidate()
         timer = nil
@@ -85,7 +95,8 @@ class Clock
     }
     
     // 4
-    func resetTimer() {
+    func resetTimer()
+    {
         // stop the timer & reset back to start
         timer?.invalidate()
         timer = nil
