@@ -4,6 +4,7 @@ class ViewController: NSViewController
 {
     @IBOutlet weak var timeField: NSTextField!
     var clock = Clock()
+    var prefs = Preferences()
     
     @IBAction func startButtonClicked(_ sender: Any)
     {
@@ -13,7 +14,7 @@ class ViewController: NSViewController
         }
         else
         {
-            clock.duration = 1500
+            clock.duration = prefs.selectedTime
             clock.startTimer()
         }
     }
@@ -27,13 +28,14 @@ class ViewController: NSViewController
     @IBAction func resetButtonClicked(_ sender: Any)
     {
         clock.resetTimer()
-        updateDisplay(for: 1500)
+        updateDisplay(for: prefs.selectedTime)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         clock.delegate = self
+        setupPrefs()
     }
 
     override var representedObject: Any?
@@ -81,3 +83,55 @@ extension ViewController
         return timeRemainingDisplay
     }
 }
+
+extension ViewController
+{
+    // MARK: - Preferences
+    
+    func setupPrefs()
+    {
+        updateDisplay(for: prefs.selectedTime)
+        
+        let notificationName = Notification.Name(rawValue: "PrefsChanged")
+        NotificationCenter.default.addObserver(forName: notificationName,
+                                               object: nil, queue: nil) {
+                                                (notification) in
+                                                self.checkForResetAfterPrefsChange()
+        }
+    }
+    
+    func updateFromPrefs()
+    {
+        self.clock.duration = self.prefs.selectedTime
+        self.resetButtonClicked(self)
+    }
+    
+    func checkForResetAfterPrefsChange()
+    {
+        if clock.isStopped || clock.isPaused
+        {
+            // 1
+            updateFromPrefs()
+        }
+        else
+        {
+            // 2
+            let alert = NSAlert()
+            alert.messageText = "Reset timer with the new settings?"
+            alert.informativeText = "This will stop your current timer!"
+            alert.alertStyle = .warning
+            
+            // 3
+            alert.addButton(withTitle: "Reset")
+            alert.addButton(withTitle: "Cancel")
+            
+            // 4
+            let response = alert.runModal()
+            if response == NSApplication.ModalResponse.alertFirstButtonReturn
+            {
+                self.updateFromPrefs()
+            }
+        }
+    }
+}
+

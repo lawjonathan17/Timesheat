@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F85DEF8F206F66350009C17E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DEF8E206F66350009C17E /* Timer.swift */; };
+		F85DEF93207013A50009C17E /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DEF92207013A50009C17E /* PrefsViewController.swift */; };
+		F85DEF9520701A580009C17E /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DEF9420701A580009C17E /* Preferences.swift */; };
 		F85FEF4D206C65BB0000A082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85FEF4C206C65BB0000A082 /* AppDelegate.swift */; };
 		F85FEF4F206C65BB0000A082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85FEF4E206C65BB0000A082 /* ViewController.swift */; };
 		F85FEF51206C65BB0000A082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85FEF50206C65BB0000A082 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		F85DEF8E206F66350009C17E /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		F85DEF92207013A50009C17E /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		F85DEF9420701A580009C17E /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F85FEF49206C65BB0000A082 /* TimeSheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeSheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85FEF4C206C65BB0000A082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F85FEF4E206C65BB0000A082 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				F85DEF8E206F66350009C17E /* Timer.swift */,
+				F85DEF9420701A580009C17E /* Preferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -48,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F85FEF4E206C65BB0000A082 /* ViewController.swift */,
+				F85DEF92207013A50009C17E /* PrefsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -155,7 +161,9 @@
 			files = (
 				F85DEF8F206F66350009C17E /* Timer.swift in Sources */,
 				F85FEF4F206C65BB0000A082 /* ViewController.swift in Sources */,
+				F85DEF9520701A580009C17E /* Preferences.swift in Sources */,
 				F85FEF4D206C65BB0000A082 /* AppDelegate.swift in Sources */,
+				F85DEF93207013A50009C17E /* PrefsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

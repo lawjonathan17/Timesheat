@@ -23,7 +23,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="jH4-bm-FNO" kind="show" id="x69-22-bUR"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -700,7 +704,142 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="460" y="345"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="XxW-jK-J6W">
+            <objects>
+                <windowController id="jH4-bm-FNO" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="UMs-2U-bdW">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="416" height="214"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+                        <connections>
+                            <outlet property="delegate" destination="jH4-bm-FNO" id="2iw-ta-MSt"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="5eS-rq-5rg" kind="relationship" relationship="window.shadowedContentViewController" id="lkZ-ZG-Wms"/>
+                    </connections>
+                </windowController>
+                <customObject id="rAY-QM-yqv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1557"/>
+        </scene>
+        <!--Prefs View Controller-->
+        <scene sceneID="Uas-SI-yf1">
+            <objects>
+                <viewController id="5eS-rq-5rg" customClass="PrefsViewController" customModule="TimeSheat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="8bj-Ze-8iE">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="214"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwD-hX-koR">
+                                <rect key="frame" x="18" y="189" width="161" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Countdown time duration:" id="cdr-mb-ZPs">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUa-Gp-kDB">
+                                <rect key="frame" x="18" y="164" width="388" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="25 minutes" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="25" imageScaling="proportionallyDown" inset="2" selectedItem="Ra3-Oc-S7B" id="dxh-q1-3KC">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="Vq9-FF-UxW">
+                                        <items>
+                                            <menuItem title="25 minutes" state="on" tag="25" id="Ra3-Oc-S7B"/>
+                                            <menuItem title="5 minutes" tag="5" id="s0W-3u-gOh"/>
+                                            <menuItem title="10 minutes" tag="10" id="Iw2-VQ-0jg"/>
+                                            <menuItem title="15 minutes" tag="15" id="oNR-AY-3Ol">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="20 minutes" tag="20" id="IPi-Cs-Cok">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="30 minutes" tag="30" id="HED-Ao-MpP">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="SZl-JF-p3d"/>
+                                            <menuItem title="Custom" id="nZ6-A2-saX">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="popupValueChanged:" target="5eS-rq-5rg" id="iNk-b1-RhR"/>
+                                </connections>
+                            </popUpButton>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-3K-ETk">
+                                <rect key="frame" x="332" y="13" width="59" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eMo-xg-NFy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="okButtonClicked:" target="5eS-rq-5rg" id="zkF-gX-n1M"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUu-JC-MHE">
+                                <rect key="frame" x="26" y="13" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EIt-ji-LkC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" target="5eS-rq-5rg" id="S81-oG-c4B"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Srf-RM-h96">
+                                <rect key="frame" x="20" y="127" width="210" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Custom countdown time duration:" id="NCx-se-nZR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFe-tP-bIw">
+                                <rect key="frame" x="234" y="127" width="82" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="25 minutes" id="4J9-wz-BAY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afK-13-cNN">
+                                <rect key="frame" x="18" y="97" width="380" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" enabled="NO" alignment="left" minValue="1" maxValue="30" doubleValue="25" tickMarkPosition="above" numberOfTickMarks="30" sliderType="linear" id="gE2-o2-bZF"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" target="5eS-rq-5rg" id="ng3-Dl-9T9"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="customSlider" destination="afK-13-cNN" id="xh6-s3-qCv"/>
+                        <outlet property="customTextField" destination="GFe-tP-bIw" id="AVJ-KO-xgy"/>
+                        <outlet property="okButtonClicked" destination="ggh-3K-ETk" id="c78-vq-EtL"/>
+                        <outlet property="presetsPopup" destination="oUa-Gp-kDB" id="NDO-8m-w4W"/>
+                    </connections>
+                </viewController>
+                <customObject id="5db-w4-Gl9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="1557"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -783,7 +922,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-19" y="655"/>
+            <point key="canvasLocation" x="460" y="1035"/>
         </scene>
     </scenes>
 </document>
