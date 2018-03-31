@@ -706,7 +706,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TimeSheat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" misplaced="YES" id="m2S-Jp-Qdl">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="341" height="466"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -718,8 +718,9 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-Ce-fWq">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-Ce-fWq">
                                 <rect key="frame" x="166" y="331" width="4" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Ad2-VU-ebs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -727,24 +728,24 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fillEqually" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-Zv-yzO">
-                                <rect key="frame" x="0.0" y="0.0" width="168" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="341" height="60"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2FT-fA-yKg">
-                                        <rect key="frame" x="0.0" y="-1" width="56" height="62"/>
+                                        <rect key="frame" x="0.0" y="-1" width="114" height="62"/>
                                         <buttonCell key="cell" type="smallSquare" title="Start" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Obv-jf-5cZ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="24"/>
                                         </buttonCell>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-yk-n5M">
-                                        <rect key="frame" x="56" y="-1" width="55" height="62"/>
+                                        <rect key="frame" x="114" y="-1" width="113" height="62"/>
                                         <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fXO-NI-6eS">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="24"/>
                                         </buttonCell>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6P4-JQ-Vab">
-                                        <rect key="frame" x="111" y="-1" width="57" height="62"/>
+                                        <rect key="frame" x="227" y="-1" width="114" height="62"/>
                                         <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0aw-r1-Q6l">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="24"/>
@@ -768,51 +769,12 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVC-WO-OmX">
-                                <rect key="frame" x="20" y="60" width="128" height="398"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OUE-Ah-V9B">
-                                        <rect key="frame" x="-2" y="281" width="132" height="117"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="6:00" id="DIg-Bz-xix">
-                                            <font key="font" size="100" name="HelveticaNeue"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-A1-N7N">
-                                        <rect key="frame" x="20" y="0.0" width="88" height="273"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="stopped" id="Axo-jd-yyo"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="4Ps-A1-N7N" secondAttribute="trailing" constant="20" symbolic="YES" id="5Le-bg-kwo"/>
-                                    <constraint firstAttribute="width" constant="128" id="GTX-57-QYY"/>
-                                    <constraint firstItem="4Ps-A1-N7N" firstAttribute="leading" secondItem="FVC-WO-OmX" secondAttribute="leading" constant="20" symbolic="YES" id="RTF-9N-aBe"/>
-                                    <constraint firstAttribute="height" constant="246" id="Tc2-YC-36F"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="tLs-Zv-yzO" firstAttribute="top" secondItem="FVC-WO-OmX" secondAttribute="bottom" constant="20" id="GTs-tZ-T82"/>
-                            <constraint firstItem="tLs-Zv-yzO" firstAttribute="top" secondItem="FVC-WO-OmX" secondAttribute="bottom" id="Hj5-Z4-zUN"/>
-                            <constraint firstItem="FVC-WO-OmX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="Igc-AB-88P"/>
                             <constraint firstAttribute="trailing" secondItem="tLs-Zv-yzO" secondAttribute="trailing" id="SMM-bK-gq0"/>
-                            <constraint firstItem="FVC-WO-OmX" firstAttribute="top" secondItem="7x1-AE-0Cr" secondAttribute="bottom" constant="20" id="cU4-ul-jEP"/>
                             <constraint firstAttribute="bottom" secondItem="tLs-Zv-yzO" secondAttribute="bottom" id="fGW-bA-Q5G"/>
                             <constraint firstItem="tLs-Zv-yzO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fg2-h0-A2p"/>
                             <constraint firstItem="tLs-Zv-yzO" firstAttribute="top" secondItem="7x1-AE-0Cr" secondAttribute="bottom" constant="418" id="grY-Ci-1mR"/>
-                            <constraint firstAttribute="trailing" secondItem="FVC-WO-OmX" secondAttribute="trailing" constant="20" symbolic="YES" id="kOF-Dd-0a9"/>
-                            <constraint firstItem="FVC-WO-OmX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="oer-OE-j1s"/>
-                            <constraint firstItem="3UJ-Ce-fWq" firstAttribute="leading" secondItem="FVC-WO-OmX" secondAttribute="trailing" constant="20" id="sb8-hs-y43"/>
-                            <constraint firstItem="FVC-WO-OmX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ubx-Na-TaE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -825,7 +787,4 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="stopped" width="128" height="128"/>
-    </resources>
 </document>
